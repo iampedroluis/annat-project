@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+/*Scroll */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+hr {
+    height: 0.1px;
+    width: 100%;
+    background-color:#1E1E1E;
+    margin: auto;
+    margin-top: 40px;
+    border: none;
+  }
+  p,li {
+    font-family: "Montserrat", sans-serif;
+  }
+
+/* menu hamburguesa */
+.bars {
+    background: #ffffff;
+    width: 80%;
+    height: 3px;
+    border-radius: 5px;
+    display: block;
+    transition: transform 0.7s, width 0.5s;
+}
+
+.l1 {
+    transform: translate(-50%, -5px);
+}
+
+.l2 {
+    transform: translate(-50%, -1px);
+}
+
+.l3 {
+    transform: translate(-50%, 4px);
+}
+
+/* Cuando el botón tiene la clase activo */
+.activo .l1 {
+    transform: translate(-55%, 100%) rotate(45deg);
+}
+
+.activo .l2 {
+    width: 0;
+}
+
+.activo .l3 {
+    transform: translate(-57%, -100%) rotate(-45deg);
+}
+
+/* Video */
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+h1{
+    font-family: "Playfair Display", serif;
+}
+
+.slide-in {
+  animation: slideInRight 0.5s forwards;
+}
+
+.slide-out {
+  animation: slideOutLeft 0.5s forwards;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
